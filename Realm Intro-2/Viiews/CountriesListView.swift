@@ -10,6 +10,7 @@ import RealmSwift
 
 struct CountriesListView: View {
     @ObservedResults(Country.self) var countries
+    @FocusState private var isFocused: Bool?
     var body: some View {
         NavigationView {
             VStack {
@@ -18,7 +19,7 @@ struct CountriesListView: View {
                 } else {
                     List {
                         ForEach(countries) { country in
-                            CountryRowView(country: country)
+                            CountryRowView(country: country, isFocused: _isFocused)
                         }
                         .listRowSeparator(.hidden)
                     }
@@ -34,6 +35,16 @@ struct CountriesListView: View {
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
+                    }
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    HStack {
+                        Spacer()
+                        Button {
+                            isFocused = nil
+                        } label: {
+                            Image(systemName: "keyboard.chevron.compact.down")
+                        }
                     }
                 }
             }
