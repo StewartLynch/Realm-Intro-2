@@ -11,6 +11,7 @@ import RealmSwift
 struct CountriesListView: View {
     @ObservedResults(Country.self) var countries
     @FocusState private var isFocused: Bool?
+    @State private var presentAlert = false
     var body: some View {
         NavigationView {
             VStack {
@@ -25,6 +26,7 @@ struct CountriesListView: View {
                                 CountryRowView(country: country, isFocused: _isFocused)
                             }
                         }
+                        .onDelete(perform: deleteCountry)
                         .listRowSeparator(.hidden)
                     }
                     .listStyle(.plain)
@@ -54,6 +56,17 @@ struct CountriesListView: View {
                 }
             }
         }
+        .alert("You must first delete all of the cities in this country.", isPresented: $presentAlert, actions: {})
+    }
+    func deleteCountry(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let selectedCountry = Array(countries.sorted(byKeyPath: "name"))[index]
+        guard selectedCountry.cities.isEmpty else {
+            // show alert
+            presentAlert.toggle()
+            return
+        }
+        $countries.remove(selectedCountry)
     }
 }
 

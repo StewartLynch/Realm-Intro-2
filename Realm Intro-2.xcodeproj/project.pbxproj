@@ -84,8 +84,8 @@
 		BBE8C3A127D6772300FE1516 /* Realm Intro-2 */ = {
 			isa = PBXGroup;
 			children = (
-				BB228B4627D6CD8800F01744 /* Models */,
 				BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */,
+				BB228B4627D6CD8800F01744 /* Models */,
 				BB228B4527D6CD7700F01744 /* Viiews */,
 				BBE8C3A627D6772400FE1516 /* Assets.xcassets */,
 				BBE8C3B027D677AC00FE1516 /* Launch Screen.storyboard */,

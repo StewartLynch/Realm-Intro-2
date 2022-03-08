@@ -36,6 +36,7 @@ struct CitiesListView: View {
                     Text(city.name)
                 }
                 .onDelete(perform: $country.cities.remove)
+                .onMove(perform: $country.cities.move)
                 .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
@@ -44,6 +45,9 @@ struct CitiesListView: View {
         .navigationTitle(country.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
             ToolbarItemGroup(placement: .keyboard) {
                 HStack {
                     Spacer()
