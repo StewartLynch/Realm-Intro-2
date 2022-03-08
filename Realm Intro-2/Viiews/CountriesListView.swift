@@ -18,7 +18,7 @@ struct CountriesListView: View {
                     Text("Tap on the \(Image(systemName: "plus.circle.fill")) button above to create a new Country.")
                 } else {
                     List {
-                        ForEach(countries) { country in
+                        ForEach(countries.sorted(byKeyPath: "name")) { country in
                             CountryRowView(country: country, isFocused: _isFocused)
                         }
                         .listRowSeparator(.hidden)
@@ -27,6 +27,7 @@ struct CountriesListView: View {
                 }
                 Spacer()
             }
+            .animation(.default, value: countries)
             .navigationTitle("Countries")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

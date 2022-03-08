@@ -13,6 +13,7 @@
 		BB228B4F27D6CDE500F01744 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BB228B4E27D6CDE500F01744 /* RealmSwift */; };
 		BB228B5227D6CE5F00F01744 /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB228B5027D6CE5F00F01744 /* CountryRowView.swift */; };
 		BB228B5327D6CE5F00F01744 /* CountriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB228B5127D6CE5F00F01744 /* CountriesListView.swift */; };
+		BBC238D427D7015E00122AE9 /* CitiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC238D327D7015E00122AE9 /* CitiesListView.swift */; };
 		BBE8C3A327D6772300FE1516 /* Realm_Intro_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */; };
 		BBE8C3A727D6772400FE1516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE8C3A627D6772400FE1516 /* Assets.xcassets */; };
 		BBE8C3AA27D6772400FE1516 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE8C3A927D6772400FE1516 /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		BB228B4827D6CD9900F01744 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		BB228B5027D6CE5F00F01744 /* CountryRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 		BB228B5127D6CE5F00F01744 /* CountriesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
+		BBC238D327D7015E00122AE9 /* CitiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListView.swift; sourceTree = "<group>"; };
 		BBE8C39F27D6772300FE1516 /* Realm Intro-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm Intro-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_Intro_2App.swift; sourceTree = "<group>"; };
 		BBE8C3A627D6772400FE1516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			children = (
 				BB228B5127D6CE5F00F01744 /* CountriesListView.swift */,
 				BB228B5027D6CE5F00F01744 /* CountryRowView.swift */,
+				BBC238D327D7015E00122AE9 /* CitiesListView.swift */,
 			);
 			path = Viiews;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB228B4927D6CD9900F01744 /* Country.swift in Sources */,
+				BBC238D427D7015E00122AE9 /* CitiesListView.swift in Sources */,
 				BB228B4A27D6CD9900F01744 /* City.swift in Sources */,
 				BB228B5227D6CE5F00F01744 /* CountryRowView.swift in Sources */,
 				BBE8C3A327D6772300FE1516 /* Realm_Intro_2App.swift in Sources */,
