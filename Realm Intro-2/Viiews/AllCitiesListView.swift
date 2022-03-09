@@ -10,6 +10,7 @@ import RealmSwift
 
 struct AllCitiesListView: View {
     @ObservedResults(City.self, sortDescriptor: SortDescriptor(keyPath: "name")) var cities
+    @State private var toggle = false
     var body: some View {
         NavigationView {
             List {
